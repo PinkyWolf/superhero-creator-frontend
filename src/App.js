@@ -16,15 +16,14 @@ class App extends Component {
 
   render() {
     const { data } = this.state;
+    console.log(data);
     return (
       <ul>
         {Array.isArray(data) &&
           data.map((obj) => (
             <li>
               <h1 className="heroName">{obj.nickname}</h1>
-              {/* <img src={} className="App-logo" alt="logo" /> */}
-              <p className="heroDescription">{obj}</p>
-              {/* <a>Learn React</a> */}
+              <img src={data} className="App-logo" alt="logo" />
             </li>
           ))}
       </ul>
